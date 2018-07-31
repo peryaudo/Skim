@@ -14,6 +14,7 @@
 		8702AA5D211083610003E9EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8702AA5B211083610003E9EF /* Main.storyboard */; };
 		8702AA69211083610003E9EF /* SkimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA68211083610003E9EF /* SkimTests.swift */; };
 		8702AA74211083610003E9EF /* SkimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA73211083610003E9EF /* SkimUITests.swift */; };
+		8702AA83211084E50003E9EF /* FeedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8702AA82211084E50003E9EF /* FeedKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8702AA6F211083610003E9EF /* SkimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8702AA73211083610003E9EF /* SkimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkimUITests.swift; sourceTree = "<group>"; };
 		8702AA75211083610003E9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8702AA82211084E50003E9EF /* FeedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FeedKit.framework; path = Carthage/Build/Mac/FeedKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8702AA83211084E50003E9EF /* FeedKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,7 @@
 				8702AA67211083610003E9EF /* SkimTests */,
 				8702AA72211083610003E9EF /* SkimUITests */,
 				8702AA50211083610003E9EF /* Products */,
+				8702AA81211084E50003E9EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 				8702AA75211083610003E9EF /* Info.plist */,
 			);
 			path = SkimUITests;
+			sourceTree = "<group>";
+		};
+		8702AA81211084E50003E9EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8702AA82211084E50003E9EF /* FeedKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +438,10 @@
 				CODE_SIGN_ENTITLEMENTS = Skim/Skim.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Skim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +460,10 @@
 				CODE_SIGN_ENTITLEMENTS = Skim/Skim.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = Skim/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
