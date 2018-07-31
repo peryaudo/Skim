@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8702AA53211083610003E9EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA52211083610003E9EF /* AppDelegate.swift */; };
+		8702AA55211083610003E9EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA54211083610003E9EF /* ViewController.swift */; };
+		8702AA58211083610003E9EF /* Skim.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA56211083610003E9EF /* Skim.xcdatamodeld */; };
+		8702AA5A211083610003E9EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8702AA59211083610003E9EF /* Assets.xcassets */; };
+		8702AA5D211083610003E9EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8702AA5B211083610003E9EF /* Main.storyboard */; };
+		8702AA69211083610003E9EF /* SkimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA68211083610003E9EF /* SkimTests.swift */; };
+		8702AA74211083610003E9EF /* SkimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA73211083610003E9EF /* SkimUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8702AA65211083610003E9EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8702AA47211083610003E9EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8702AA4E211083610003E9EF;
+			remoteInfo = Skim;
+		};
+		8702AA70211083610003E9EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8702AA47211083610003E9EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8702AA4E211083610003E9EF;
+			remoteInfo = Skim;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8702AA4F211083610003E9EF /* Skim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8702AA52211083610003E9EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8702AA54211083610003E9EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8702AA57211083610003E9EF /* Skim.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skim.xcdatamodel; sourceTree = "<group>"; };
+		8702AA59211083610003E9EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8702AA5C211083610003E9EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8702AA5E211083610003E9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8702AA5F211083610003E9EF /* Skim.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Skim.entitlements; sourceTree = "<group>"; };
+		8702AA64211083610003E9EF /* SkimTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkimTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8702AA68211083610003E9EF /* SkimTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkimTests.swift; sourceTree = "<group>"; };
+		8702AA6A211083610003E9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8702AA6F211083610003E9EF /* SkimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8702AA73211083610003E9EF /* SkimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkimUITests.swift; sourceTree = "<group>"; };
+		8702AA75211083610003E9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8702AA4C211083610003E9EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA61211083610003E9EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA6C211083610003E9EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8702AA46211083610003E9EF = {
+			isa = PBXGroup;
+			children = (
+				8702AA51211083610003E9EF /* Skim */,
+				8702AA67211083610003E9EF /* SkimTests */,
+				8702AA72211083610003E9EF /* SkimUITests */,
+				8702AA50211083610003E9EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8702AA50211083610003E9EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8702AA4F211083610003E9EF /* Skim.app */,
+				8702AA64211083610003E9EF /* SkimTests.xctest */,
+				8702AA6F211083610003E9EF /* SkimUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8702AA51211083610003E9EF /* Skim */ = {
+			isa = PBXGroup;
+			children = (
+				8702AA52211083610003E9EF /* AppDelegate.swift */,
+				8702AA54211083610003E9EF /* ViewController.swift */,
+				8702AA59211083610003E9EF /* Assets.xcassets */,
+				8702AA5B211083610003E9EF /* Main.storyboard */,
+				8702AA5E211083610003E9EF /* Info.plist */,
+				8702AA5F211083610003E9EF /* Skim.entitlements */,
+				8702AA56211083610003E9EF /* Skim.xcdatamodeld */,
+			);
+			path = Skim;
+			sourceTree = "<group>";
+		};
+		8702AA67211083610003E9EF /* SkimTests */ = {
+			isa = PBXGroup;
+			children = (
+				8702AA68211083610003E9EF /* SkimTests.swift */,
+				8702AA6A211083610003E9EF /* Info.plist */,
+			);
+			path = SkimTests;
+			sourceTree = "<group>";
+		};
+		8702AA72211083610003E9EF /* SkimUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8702AA73211083610003E9EF /* SkimUITests.swift */,
+				8702AA75211083610003E9EF /* Info.plist */,
+			);
+			path = SkimUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8702AA4E211083610003E9EF /* Skim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8702AA78211083610003E9EF /* Build configuration list for PBXNativeTarget "Skim" */;
+			buildPhases = (
+				8702AA4B211083610003E9EF /* Sources */,
+				8702AA4C211083610003E9EF /* Frameworks */,
+				8702AA4D211083610003E9EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skim;
+			productName = Skim;
+			productReference = 8702AA4F211083610003E9EF /* Skim.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8702AA63211083610003E9EF /* SkimTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8702AA7B211083610003E9EF /* Build configuration list for PBXNativeTarget "SkimTests" */;
+			buildPhases = (
+				8702AA60211083610003E9EF /* Sources */,
+				8702AA61211083610003E9EF /* Frameworks */,
+				8702AA62211083610003E9EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8702AA66211083610003E9EF /* PBXTargetDependency */,
+			);
+			name = SkimTests;
+			productName = SkimTests;
+			productReference = 8702AA64211083610003E9EF /* SkimTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8702AA6E211083610003E9EF /* SkimUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8702AA7E211083610003E9EF /* Build configuration list for PBXNativeTarget "SkimUITests" */;
+			buildPhases = (
+				8702AA6B211083610003E9EF /* Sources */,
+				8702AA6C211083610003E9EF /* Frameworks */,
+				8702AA6D211083610003E9EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8702AA71211083610003E9EF /* PBXTargetDependency */,
+			);
+			name = SkimUITests;
+			productName = SkimUITests;
+			productReference = 8702AA6F211083610003E9EF /* SkimUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8702AA47211083610003E9EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = peryaudo;
+				TargetAttributes = {
+					8702AA4E211083610003E9EF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					8702AA63211083610003E9EF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8702AA4E211083610003E9EF;
+					};
+					8702AA6E211083610003E9EF = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 8702AA4E211083610003E9EF;
+					};
+				};
+			};
+			buildConfigurationList = 8702AA4A211083610003E9EF /* Build configuration list for PBXProject "Skim" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8702AA46211083610003E9EF;
+			productRefGroup = 8702AA50211083610003E9EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8702AA4E211083610003E9EF /* Skim */,
+				8702AA63211083610003E9EF /* SkimTests */,
+				8702AA6E211083610003E9EF /* SkimUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8702AA4D211083610003E9EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8702AA5A211083610003E9EF /* Assets.xcassets in Resources */,
+				8702AA5D211083610003E9EF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA62211083610003E9EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA6D211083610003E9EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8702AA4B211083610003E9EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8702AA55211083610003E9EF /* ViewController.swift in Sources */,
+				8702AA58211083610003E9EF /* Skim.xcdatamodeld in Sources */,
+				8702AA53211083610003E9EF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA60211083610003E9EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8702AA69211083610003E9EF /* SkimTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8702AA6B211083610003E9EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8702AA74211083610003E9EF /* SkimUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8702AA66211083610003E9EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8702AA4E211083610003E9EF /* Skim */;
+			targetProxy = 8702AA65211083610003E9EF /* PBXContainerItemProxy */;
+		};
+		8702AA71211083610003E9EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8702AA4E211083610003E9EF /* Skim */;
+			targetProxy = 8702AA70211083610003E9EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8702AA5B211083610003E9EF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8702AA5C211083610003E9EF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8702AA76211083610003E9EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8702AA77211083610003E9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8702AA79211083610003E9EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Skim/Skim.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Skim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.Skim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		8702AA7A211083610003E9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Skim/Skim.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Skim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.Skim;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		8702AA7C211083610003E9EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SkimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.SkimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skim.app/Contents/MacOS/Skim";
+			};
+			name = Debug;
+		};
+		8702AA7D211083610003E9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SkimTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.SkimTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Skim.app/Contents/MacOS/Skim";
+			};
+			name = Release;
+		};
+		8702AA7F211083610003E9EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SkimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.SkimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Skim;
+			};
+			name = Debug;
+		};
+		8702AA80211083610003E9EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SkimUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.peryaudo.SkimUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = Skim;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8702AA4A211083610003E9EF /* Build configuration list for PBXProject "Skim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8702AA76211083610003E9EF /* Debug */,
+				8702AA77211083610003E9EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8702AA78211083610003E9EF /* Build configuration list for PBXNativeTarget "Skim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8702AA79211083610003E9EF /* Debug */,
+				8702AA7A211083610003E9EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8702AA7B211083610003E9EF /* Build configuration list for PBXNativeTarget "SkimTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8702AA7C211083610003E9EF /* Debug */,
+				8702AA7D211083610003E9EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8702AA7E211083610003E9EF /* Build configuration list for PBXNativeTarget "SkimUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8702AA7F211083610003E9EF /* Debug */,
+				8702AA80211083610003E9EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8702AA56211083610003E9EF /* Skim.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8702AA57211083610003E9EF /* Skim.xcdatamodel */,
+			);
+			currentVersion = 8702AA57211083610003E9EF /* Skim.xcdatamodel */;
+			path = Skim.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8702AA47211083610003E9EF /* Project object */;
+}
