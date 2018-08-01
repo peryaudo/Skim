@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8702AA53211083610003E9EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA52211083610003E9EF /* AppDelegate.swift */; };
-		8702AA55211083610003E9EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA54211083610003E9EF /* ViewController.swift */; };
 		8702AA58211083610003E9EF /* Skim.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA56211083610003E9EF /* Skim.xcdatamodeld */; };
 		8702AA5A211083610003E9EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8702AA59211083610003E9EF /* Assets.xcassets */; };
 		8702AA5D211083610003E9EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8702AA5B211083610003E9EF /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F872111D0E30095A180 /* AddNewFeedController.swift */; };
 		87B94F8A2111D96E0095A180 /* FeedListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F892111D96E0095A180 /* FeedListController.swift */; };
 		87B94F8C2111D9820095A180 /* FeedContentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F8B2111D9820095A180 /* FeedContentsController.swift */; };
+		87B94F8E2111EE5F0095A180 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F8D2111EE5F0095A180 /* WindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 /* Begin PBXFileReference section */
 		8702AA4F211083610003E9EF /* Skim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8702AA52211083610003E9EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8702AA54211083610003E9EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8702AA57211083610003E9EF /* Skim.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skim.xcdatamodel; sourceTree = "<group>"; };
 		8702AA59211083610003E9EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8702AA5C211083610003E9EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		87B94F872111D0E30095A180 /* AddNewFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedController.swift; sourceTree = "<group>"; };
 		87B94F892111D96E0095A180 /* FeedListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListController.swift; sourceTree = "<group>"; };
 		87B94F8B2111D9820095A180 /* FeedContentsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentsController.swift; sourceTree = "<group>"; };
+		87B94F8D2111EE5F0095A180 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8702AA52211083610003E9EF /* AppDelegate.swift */,
-				8702AA54211083610003E9EF /* ViewController.swift */,
+				87B94F8D2111EE5F0095A180 /* WindowController.swift */,
 				87B94F872111D0E30095A180 /* AddNewFeedController.swift */,
 				87B94F892111D96E0095A180 /* FeedListController.swift */,
 				87B94F8B2111D9820095A180 /* FeedContentsController.swift */,
@@ -295,8 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */,
-				8702AA55211083610003E9EF /* ViewController.swift in Sources */,
 				87B94F8A2111D96E0095A180 /* FeedListController.swift in Sources */,
+				87B94F8E2111EE5F0095A180 /* WindowController.swift in Sources */,
 				8702AA58211083610003E9EF /* Skim.xcdatamodeld in Sources */,
 				8702AA53211083610003E9EF /* AppDelegate.swift in Sources */,
 				87B94F8C2111D9820095A180 /* FeedContentsController.swift in Sources */,
