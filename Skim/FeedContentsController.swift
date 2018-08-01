@@ -20,4 +20,9 @@ class FeedContentsController: NSViewController {
         arrayController.fetch(nil)
     }
     
+    @IBAction func articleDoubleClicked(_ sender: Any) {
+        guard let selectedObjects = arrayController.selectedObjects else { return }
+        guard let url = (selectedObjects[0] as? Article)?.url else { return }
+        NSWorkspace.shared.open(url)
+    }
 }

@@ -1071,6 +1071,7 @@ Gw
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
+                                                <action trigger="doubleAction" selector="articleDoubleClicked:" target="uh9-JT-XT3" id="ra1-s4-lQu"/>
                                                 <binding destination="vjk-OS-v8i" name="content" keyPath="arrangedObjects" id="icZ-zm-5Ov"/>
                                             </connections>
                                         </tableView>
