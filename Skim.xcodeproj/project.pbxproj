@@ -16,6 +16,7 @@
 		8702AA74211083610003E9EF /* SkimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702AA73211083610003E9EF /* SkimUITests.swift */; };
 		8702AA83211084E50003E9EF /* FeedKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8702AA82211084E50003E9EF /* FeedKit.framework */; };
 		8702AA85211085D20003E9EF /* FeedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8702AA82211084E50003E9EF /* FeedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F872111D0E30095A180 /* AddNewFeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8702AA73211083610003E9EF /* SkimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkimUITests.swift; sourceTree = "<group>"; };
 		8702AA75211083610003E9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8702AA82211084E50003E9EF /* FeedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FeedKit.framework; path = Carthage/Build/Mac/FeedKit.framework; sourceTree = "<group>"; };
+		87B94F872111D0E30095A180 /* AddNewFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				8702AA52211083610003E9EF /* AppDelegate.swift */,
 				8702AA54211083610003E9EF /* ViewController.swift */,
+				87B94F872111D0E30095A180 /* AddNewFeedController.swift */,
 				8702AA59211083610003E9EF /* Assets.xcassets */,
 				8702AA5B211083610003E9EF /* Main.storyboard */,
 				8702AA5E211083610003E9EF /* Info.plist */,
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */,
 				8702AA55211083610003E9EF /* ViewController.swift in Sources */,
 				8702AA58211083610003E9EF /* Skim.xcdatamodeld in Sources */,
 				8702AA53211083610003E9EF /* AppDelegate.swift in Sources */,

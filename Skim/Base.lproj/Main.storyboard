@@ -5,10 +5,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add New Feed Controller-->
         <scene sceneID="hff-Cm-mTl">
             <objects>
-                <viewController id="Wx2-K2-zOU" sceneMemberID="viewController">
+                <viewController id="Wx2-K2-zOU" customClass="AddNewFeedController" customModule="Skim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="uQh-io-VDq">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="275"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -16,12 +16,12 @@
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58K-ml-1JG">
                                 <rect key="frame" x="18" y="69" width="415" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LIP-SY-Sn3" id="49I-Al-enI">
+                                <popUpButtonCell key="cell" type="push" title="Select folder..." bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LIP-SY-Sn3" id="49I-Al-enI">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="GJk-g0-zHz">
                                         <items>
-                                            <menuItem title="Item 1" state="on" id="LIP-SY-Sn3"/>
+                                            <menuItem title="Select folder..." state="on" id="LIP-SY-Sn3"/>
                                             <menuItem title="Item 2" id="2xT-Vw-ldE"/>
                                             <menuItem title="Item 3" id="aP5-Qr-TeN"/>
                                         </items>
@@ -47,6 +47,9 @@
 DQ
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="okClickedAction:" target="Wx2-K2-zOU" id="XDx-hM-9iG"/>
+                                </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kPw-Bd-D34">
                                 <rect key="frame" x="20" y="101" width="47" height="17"/>
@@ -103,9 +106,16 @@ DQ
 Gw
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="p5f-j9-Rff" id="Tvh-i4-5RE"/>
+                                </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="RqJ-Ch-leZ" id="DYK-bE-pqc"/>
+                        <outlet property="urlTextField" destination="QRK-YP-82W" id="pft-TM-ba0"/>
+                    </connections>
                 </viewController>
                 <customObject id="p5f-j9-Rff" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -835,6 +845,9 @@ Gw
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <segue destination="Wx2-K2-zOU" kind="sheet" id="oOG-ce-pmE"/>
+                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="949D0D6E-00B9-4CA2-A718-CA175D3FDAE2" label="Spinner" paletteLabel="Spinner" tag="-1" id="Nyg-cV-XdI">
                                     <nil key="toolTip"/>
