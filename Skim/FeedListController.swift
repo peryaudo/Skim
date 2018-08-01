@@ -9,10 +9,15 @@
 import Cocoa
 
 class FeedListController: NSViewController {
-
+    @IBOutlet var treeController: NSTreeController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        treeController.managedObjectContext = appDelegate.persistentContainer.viewContext
+        treeController.fetch(nil)
     }
     
 }

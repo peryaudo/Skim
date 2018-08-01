@@ -965,6 +965,9 @@ Gw
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="Cbl-Zi-rbq" name="value" keyPath="objectValue.title" id="xoJ-LF-zqJ"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -974,6 +977,9 @@ Gw
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="Wv1-88-816" name="content" keyPath="arrangedObjects" id="GXU-hP-a3X"/>
+                                            </connections>
                                         </outlineView>
                                     </subviews>
                                 </clipView>
@@ -994,8 +1000,12 @@ Gw
                             <constraint firstAttribute="bottom" secondItem="4Kz-YJ-4Pd" secondAttribute="bottom" id="lb8-sn-Kg1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="treeController" destination="Wv1-88-816" id="BBE-Iq-nUd"/>
+                    </connections>
                 </viewController>
                 <customObject id="ZZK-Cp-j4l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <treeController mode="entity" entityName="Feed" editable="NO" childrenKeyPath="articles" id="Wv1-88-816"/>
             </objects>
             <point key="canvasLocation" x="642" y="355"/>
         </scene>
@@ -1076,6 +1086,7 @@ Gw
                     </view>
                 </viewController>
                 <customObject id="Cg8-kz-T5n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController id="vjk-OS-v8i"/>
             </objects>
             <point key="canvasLocation" x="792" y="931"/>
         </scene>
