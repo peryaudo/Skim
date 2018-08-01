@@ -1058,6 +1058,9 @@ Gw
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.title" id="3RH-Jr-7cl"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -1067,6 +1070,9 @@ Gw
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="vjk-OS-v8i" name="content" keyPath="arrangedObjects" id="icZ-zm-5Ov"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -1087,9 +1093,12 @@ Gw
                             <constraint firstItem="FCr-Ea-FDe" firstAttribute="top" secondItem="YlX-rl-ByK" secondAttribute="top" id="un1-lw-6qE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arrayController" destination="vjk-OS-v8i" id="KQu-N5-Y8k"/>
+                    </connections>
                 </viewController>
                 <customObject id="Cg8-kz-T5n" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController id="vjk-OS-v8i"/>
+                <arrayController mode="entity" entityName="Article" editable="NO" id="vjk-OS-v8i"/>
             </objects>
             <point key="canvasLocation" x="792" y="931"/>
         </scene>

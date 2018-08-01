@@ -9,10 +9,15 @@
 import Cocoa
 
 class FeedContentsController: NSViewController {
-
+    @IBOutlet var arrayController: NSArrayController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        arrayController.managedObjectContext = appDelegate.persistentContainer.viewContext
+        arrayController.fetch(nil)
     }
     
 }
