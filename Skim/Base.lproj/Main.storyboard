@@ -919,10 +919,10 @@ Gw
             </objects>
             <point key="canvasLocation" x="75" y="730"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed List Controller-->
         <scene sceneID="IWT-Kt-zqN">
             <objects>
-                <viewController id="1j4-sc-hHG" sceneMemberID="viewController">
+                <viewController id="1j4-sc-hHG" customClass="FeedListController" customModule="Skim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="cMZ-du-kPB">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -999,10 +999,10 @@ Gw
             </objects>
             <point key="canvasLocation" x="642" y="355"/>
         </scene>
-        <!--View Controller-->
+        <!--Feed Contents Controller-->
         <scene sceneID="9gP-8r-CrY">
             <objects>
-                <viewController id="uh9-JT-XT3" sceneMemberID="viewController">
+                <viewController id="uh9-JT-XT3" customClass="FeedContentsController" customModule="Skim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="YlX-rl-ByK">
                         <rect key="frame" x="0.0" y="0.0" width="550" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
