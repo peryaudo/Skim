@@ -21,18 +21,18 @@ class AddNewFeedController: NSViewController {
         guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
             return
         }
+        guard let url = URL(string: urlTextField.stringValue) else {
+            let alert = NSAlert()
+            alert.messageText = "The URL was not valid"
+            alert.runModal()
+            return
+        }
+        
         let managedContext = appDelegate.persistentContainer.viewContext
         
         let feed = Feed(context: managedContext)
-        feed.title = titleTextField.stringValue
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            let alert = NSAlert()
-            alert.messageText = "Could not save: \(error)"
-            alert.runModal()
-        }
+        feed.url = url
+        feed.retrieveFromUrl()
         
         dismissViewController(self)
     }
