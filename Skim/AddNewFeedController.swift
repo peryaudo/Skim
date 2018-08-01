@@ -23,9 +23,8 @@ class AddNewFeedController: NSViewController {
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let entity = NSEntityDescription.entity(forEntityName: "Feed", in: managedContext)!
-        let feed = NSManagedObject(entity: entity, insertInto: managedContext)
-        feed.setValue(titleTextField.stringValue, forKey: "title")
+        let feed = Feed(context: managedContext)
+        feed.title = titleTextField.stringValue
         
         do {
             try managedContext.save()
