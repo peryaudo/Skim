@@ -41,8 +41,8 @@ public class Feed: NSManagedObject {
                 let article = Article(context: managedObjectContext!)
                 article.date = item.pubDate
                 article.title = item.title
-                if let url = item.source?.value {
-                    article.url = URL(string: url)
+                if let link = item.link {
+                    article.url = URL(string: link)
                 }
                 print(article.title ?? "(none)")
                 addToArticles(article)
