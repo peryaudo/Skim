@@ -18,6 +18,23 @@ class AddNewFeedController: NSViewController {
     }
     
     @IBAction func okClickedAction(_ sender: Any) {
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "Feed", in: managedContext)!
+        let feed = NSManagedObject(entity: entity, insertInto: managedContext)
+        feed.setValue(titleTextField.stringValue, forKey: "title")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            let alert = NSAlert()
+            alert.messageText = "Could not save: \(error)"
+            alert.runModal()
+        }
+        
         dismissViewController(self)
     }
 }
