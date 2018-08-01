@@ -38,12 +38,13 @@ public class Feed: NSManagedObject {
             self.title = feed.title
             guard let items = feed.items else { return }
             for item in items {
-                let article = Article()
+                let article = Article(context: managedObjectContext!)
                 article.date = item.pubDate
                 article.title = item.title
                 if let url = item.source?.value {
                     article.url = URL(string: url)
                 }
+                print(article.title ?? "(none)")
                 addToArticles(article)
             }
         case .atom(_):

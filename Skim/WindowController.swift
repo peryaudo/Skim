@@ -16,5 +16,13 @@ class WindowController: NSWindowController {
     }
     
     @IBAction func reloadAction(_ sender: Any) {
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let feed = Feed(context: managedContext)
+        feed.url = URL(string: "http://peryaudo.hatenablog.com/rss")
+        feed.retrieveFromUrl()
     }
 }
