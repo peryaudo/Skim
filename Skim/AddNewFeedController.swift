@@ -37,6 +37,7 @@ class AddNewFeedController: NSViewController {
         let feed = Feed(context: managedContext)
         feed.url = url
         feed.folder = folder
+        feed.title = "Untitled"
 
         do {
             try managedContext.save()

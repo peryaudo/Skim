@@ -14,6 +14,10 @@ class FeedContentsController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SelectedFeed.shared.observer = self
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        arrayController.managedObjectContext = appDelegate.persistentContainer.viewContext
     }
 
     @IBAction func articleDoubleClicked(_ sender: Any) {
@@ -26,8 +30,9 @@ class FeedContentsController: NSViewController {
 extension FeedContentsController: SelectedFeedObserver {
     func onSelectedFeedChanged() {
         guard let feed = SelectedFeed.shared.feed else { return }
-        arrayController.content = feed.articles
         arrayController.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        arrayController.fetchPredicate = NSPredicate(format: "feed == %@", feed)
+        arrayController.fetch(nil)
         arrayController.setSelectionIndex(0)
     }
 }
