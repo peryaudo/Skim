@@ -28,5 +28,6 @@ extension FeedContentsController: SelectedFeedObserver {
         guard let feed = SelectedFeed.shared.feed else { return }
         arrayController.content = feed.articles
         arrayController.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        arrayController.setSelectionIndex(0)
     }
 }

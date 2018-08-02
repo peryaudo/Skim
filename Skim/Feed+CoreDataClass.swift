@@ -21,6 +21,7 @@ public class Feed: NSManagedObject {
             guard let data = data else { return }
             let result = FeedParser(data: data).parse()
             DispatchQueue.main.async {
+                self.managedObjectContext!.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
                 self.addToArticles(result: result)
                 do {
                     try context.save()

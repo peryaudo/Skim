@@ -46,9 +46,7 @@ class AddNewFeedController: NSViewController {
             alert.messageText = "Cannot save"
             alert.runModal()
         }
-        
-        feed.retrieveFromUrl()
-        
+
         dismissViewController(self)
     }
 }

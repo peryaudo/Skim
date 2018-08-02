@@ -21,8 +21,15 @@ class WindowController: NSWindowController {
         }
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let feed = Feed(context: managedContext)
-        feed.url = URL(string: "http://peryaudo.hatenablog.com/rss")
-        feed.retrieveFromUrl()
+        var feeds: [Feed] = []
+        
+        let request: NSFetchRequest<Feed> = Feed.fetchRequest()
+        managedContext.performAndWait {
+            feeds = try! request.execute()
+        }
+                
+        for feed in feeds {
+            feed.retrieveFromUrl()
+        }
     }
 }
