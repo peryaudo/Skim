@@ -14,7 +14,7 @@ import FeedKit
 @objc(Feed)
 public class Feed: NSManagedObject {
 
-    func retrieveFromUrl() {
+    func retrieveFromUrl(closure: @escaping () -> Void) {
         guard let url = url else { return }
         guard let context = managedObjectContext else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -28,6 +28,7 @@ public class Feed: NSManagedObject {
                 } catch {
                     print("cannot save")
                 }
+                closure()
             }
         }
         task.resume()

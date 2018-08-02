@@ -9,10 +9,14 @@
 import Cocoa
 
 class WindowController: NSWindowController {
+    @IBOutlet weak var loadingSpinner: NSProgressIndicator!
+
+    var loadingCount: Int = 0
+
     override func windowDidLoad() {
         super.windowDidLoad()
     
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+        loadingSpinner.isHidden = true
     }
     
     @IBAction func reloadAction(_ sender: Any) {
@@ -27,9 +31,17 @@ class WindowController: NSWindowController {
         managedContext.performAndWait {
             feeds = try! request.execute()
         }
-                
+
+        loadingCount = feeds.count
+        loadingSpinner.isHidden = false
+        loadingSpinner.startAnimation(self)
+
         for feed in feeds {
-            feed.retrieveFromUrl()
+            feed.retrieveFromUrl() {
+                self.loadingCount -= 1
+                self.loadingSpinner.stopAnimation(self)
+                self.loadingSpinner.isHidden = true
+            }
         }
     }
 }

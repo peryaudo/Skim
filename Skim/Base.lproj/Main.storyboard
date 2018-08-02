@@ -894,6 +894,7 @@ Gw
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="loadingSpinner" destination="9j2-oh-cDX" id="MW9-n4-Yjo"/>
                         <segue destination="iAc-Fm-bPr" kind="relationship" relationship="window.shadowedContentViewController" id="7gE-fY-vBS"/>
                     </connections>
                 </windowController>
