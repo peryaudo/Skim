@@ -29,13 +29,24 @@ class AddNewFeedController: NSViewController {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
+        managedContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
         let folder = Folder(context: managedContext)
         folder.title = "Untitled"
-        
+
         let feed = Feed(context: managedContext)
         feed.url = url
         feed.folder = folder
+
+        do {
+            try managedContext.save()
+        } catch {
+            managedContext.rollback()
+            let alert = NSAlert()
+            alert.messageText = "Cannot save"
+            alert.runModal()
+        }
+        
         feed.retrieveFromUrl()
         
         dismissViewController(self)
