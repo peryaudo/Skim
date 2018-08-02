@@ -8,7 +8,16 @@
 
 import Cocoa
 
-class SelectedFeed: NSObject {
+protocol SelectedFeedObserver: class {
+    func onSelectedFeedChanged()
+}
+
+class SelectedFeed {
     static let shared = SelectedFeed()
-    @objc dynamic var feed: Feed?
+    weak var observer: SelectedFeedObserver?
+    var feed: Feed? {
+        didSet {
+            observer?.onSelectedFeedChanged()
+        }
+    }
 }

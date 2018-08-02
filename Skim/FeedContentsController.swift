@@ -11,20 +11,21 @@ import Cocoa
 class FeedContentsController: NSViewController {
     @IBOutlet var arrayController: NSArrayController!
     
-    let selectedFeed = SelectedFeed.shared
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        arrayController.managedObjectContext = appDelegate.persistentContainer.viewContext
-        arrayController.fetch(nil)
+        SelectedFeed.shared.observer = self
     }
-    
+
     @IBAction func articleDoubleClicked(_ sender: Any) {
         guard let selectedObjects = arrayController.selectedObjects else { return }
         guard let url = (selectedObjects[0] as? Article)?.url else { return }
         NSWorkspace.shared.open(url)
+    }
+}
+
+extension FeedContentsController: SelectedFeedObserver {
+    func onSelectedFeedChanged() {
+        guard let feed = SelectedFeed.shared.feed else { return }
+        arrayController.content = feed.articles
     }
 }
