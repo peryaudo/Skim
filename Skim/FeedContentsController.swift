@@ -19,12 +19,26 @@ class FeedContentsController: NSViewController {
         }
         arrayController.managedObjectContext = appDelegate.persistentContainer.viewContext
     }
+    
+    override func keyDown(with event: NSEvent) {
+        switch event.characters {
+        case "j":
+            arrayController.selectNext(self)
+        case "k":
+            arrayController.selectPrevious(self)
+        case "v":
+            articleDoubleClicked(self)
+        default:
+            ()
+        }
+    }
 
     @IBAction func articleDoubleClicked(_ sender: Any) {
         guard let selectedObjects = arrayController.selectedObjects else { return }
         guard let url = (selectedObjects[0] as? Article)?.url else { return }
         NSWorkspace.shared.open(url)
     }
+    
 }
 
 extension FeedContentsController: SelectedFeedObserver {
