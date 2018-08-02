@@ -11,10 +11,27 @@ import Cocoa
 class AddNewFeedController: NSViewController {
     @IBOutlet weak var urlTextField: NSTextField!
     @IBOutlet weak var titleTextField: NSTextField!
+    @IBOutlet weak var folderComboBox: NSComboBox!
+    @IBOutlet weak var loadingSpinner: NSProgressIndicator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        var folderNames: [String] = []
+        
+        let request: NSFetchRequest<Folder> = Folder.fetchRequest()
+        managedContext.performAndWait {
+            let folders = try! request.execute()
+            folderNames = folders.map({ (folder) -> String in
+                return folder.title!
+            })
+        }
+        
+        folderComboBox.addItems(withObjectValues: folderNames)
     }
     
     @IBAction func okClickedAction(_ sender: Any) {
@@ -32,7 +49,7 @@ class AddNewFeedController: NSViewController {
         managedContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
         let folder = Folder(context: managedContext)
-        folder.title = "Untitled"
+        folder.title = folderComboBox.stringValue
 
         let feed = Feed(context: managedContext)
         feed.url = url
@@ -46,8 +63,17 @@ class AddNewFeedController: NSViewController {
             let alert = NSAlert()
             alert.messageText = "Cannot save"
             alert.runModal()
+            return
         }
-
-        dismissViewController(self)
+        
+        loadingSpinner.isHidden = false
+        loadingSpinner.startAnimation(self)
+        
+        feed.retrieveFromUrl {
+            self.loadingSpinner.isHidden = true
+            self.loadingSpinner.stopAnimation(self)
+            self.titleTextField.stringValue = feed.title!
+            self.dismissViewController(self)
+        }
     }
 }

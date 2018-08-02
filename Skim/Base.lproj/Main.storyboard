@@ -13,21 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="450" height="275"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="58K-ml-1JG">
-                                <rect key="frame" x="18" y="69" width="415" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Select folder..." bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="LIP-SY-Sn3" id="49I-Al-enI">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="GJk-g0-zHz">
-                                        <items>
-                                            <menuItem title="Select folder..." state="on" id="LIP-SY-Sn3"/>
-                                            <menuItem title="Item 2" id="2xT-Vw-ldE"/>
-                                            <menuItem title="Item 3" id="aP5-Qr-TeN"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QbX-0P-vcn">
                                 <rect key="frame" x="18" y="236" width="99" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -88,7 +73,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RqJ-Ch-leZ">
-                                <rect key="frame" x="20" y="126" width="386" height="22"/>
+                                <rect key="frame" x="20" y="126" width="410" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0eb-Zd-kMa">
                                     <font key="font" metaFont="system"/>
@@ -110,13 +95,24 @@ Gw
                                     <action selector="dismissController:" target="p5f-j9-Rff" id="Tvh-i4-5RE"/>
                                 </connections>
                             </button>
-                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-eu-xT9">
-                                <rect key="frame" x="414" y="130" width="16" height="16"/>
+                            <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ki8-wB-jqw">
+                                <rect key="frame" x="20" y="68" width="413" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="Untitled" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="eWN-Lq-LdA">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </comboBoxCell>
+                            </comboBox>
+                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-eu-xT9">
+                                <rect key="frame" x="412" y="129" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="folderComboBox" destination="ki8-wB-jqw" id="R2S-4n-cbV"/>
+                        <outlet property="loadingSpinner" destination="3MG-eu-xT9" id="aoL-Je-bXb"/>
                         <outlet property="titleTextField" destination="RqJ-Ch-leZ" id="DYK-bE-pqc"/>
                         <outlet property="urlTextField" destination="QRK-YP-82W" id="pft-TM-ba0"/>
                     </connections>
