@@ -30,8 +30,12 @@ class AddNewFeedController: NSViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
+        let folder = Folder(context: managedContext)
+        folder.title = "Untitled"
+        
         let feed = Feed(context: managedContext)
         feed.url = url
+        feed.folder = folder
         feed.retrieveFromUrl()
         
         dismissViewController(self)

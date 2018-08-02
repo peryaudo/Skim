@@ -44,7 +44,6 @@ public class Feed: NSManagedObject {
                 if let link = item.link {
                     article.url = URL(string: link)
                 }
-                print(article.title ?? "(none)")
                 addToArticles(article)
             }
         case .atom(_):

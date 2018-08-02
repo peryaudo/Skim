@@ -987,6 +987,7 @@ Gw
                                             <connections>
                                                 <action selector="feedSelectedAction:" target="1j4-sc-hHG" id="c65-XD-ZGn"/>
                                                 <binding destination="Wv1-88-816" name="content" keyPath="arrangedObjects" id="GXU-hP-a3X"/>
+                                                <binding destination="Wv1-88-816" name="selectionIndexPaths" keyPath="selectionIndexPaths" previousBinding="GXU-hP-a3X" id="SJX-OI-DcE"/>
                                             </connections>
                                         </outlineView>
                                     </subviews>
@@ -1013,7 +1014,7 @@ Gw
                     </connections>
                 </viewController>
                 <customObject id="ZZK-Cp-j4l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <treeController mode="entity" entityName="Feed" editable="NO" childrenKeyPath="articles" id="Wv1-88-816"/>
+                <treeController mode="entity" entityName="Folder" editable="NO" childrenKeyPath="feeds" leafKeyPath="isLeaf" id="Wv1-88-816"/>
             </objects>
             <point key="canvasLocation" x="642" y="355"/>
         </scene>
@@ -1078,6 +1079,7 @@ Gw
                                             <connections>
                                                 <action trigger="doubleAction" selector="articleDoubleClicked:" target="uh9-JT-XT3" id="ra1-s4-lQu"/>
                                                 <binding destination="vjk-OS-v8i" name="content" keyPath="arrangedObjects" id="icZ-zm-5Ov"/>
+                                                <binding destination="vjk-OS-v8i" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="icZ-zm-5Ov" id="LQP-xc-cEk"/>
                                             </connections>
                                         </tableView>
                                     </subviews>
