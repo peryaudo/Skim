@@ -985,6 +985,7 @@ Gw
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
+                                                <action selector="feedSelectedAction:" target="1j4-sc-hHG" id="c65-XD-ZGn"/>
                                                 <binding destination="Wv1-88-816" name="content" keyPath="arrangedObjects" id="GXU-hP-a3X"/>
                                             </connections>
                                         </outlineView>

@@ -11,6 +11,8 @@ import Cocoa
 class FeedContentsController: NSViewController {
     @IBOutlet var arrayController: NSArrayController!
     
+    let selectedFeed = SelectedFeed.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let appDelegate = NSApplication.shared.delegate as? AppDelegate else {

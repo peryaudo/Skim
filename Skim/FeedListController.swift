@@ -20,4 +20,12 @@ class FeedListController: NSViewController {
         treeController.fetch(nil)
     }
     
+    @IBAction func feedSelectedAction(_ sender: Any) {
+        let selectedObjects = treeController.selectedObjects
+        if selectedObjects.isEmpty {
+            return
+        }
+        guard let feed = selectedObjects[0] as? Feed else { return }
+        SelectedFeed.shared.feed = feed
+    }
 }
