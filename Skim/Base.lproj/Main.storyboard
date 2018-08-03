@@ -970,7 +970,7 @@ Gw
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="Cbl-Zi-rbq" name="value" keyPath="objectValue.title" id="xoJ-LF-zqJ"/>
+                                                                        <binding destination="Cbl-Zi-rbq" name="value" keyPath="objectValue.titleWithCount" id="Tzv-Fb-Kjk"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>

@@ -24,7 +24,7 @@
             </uniquenessConstraint>
         </uniquenessConstraints>
     </entity>
-    <entity name="Folder" representedClassName="Folder" syncable="YES" codeGenerationType="class">
+    <entity name="Folder" representedClassName="Folder" syncable="YES" codeGenerationType="category">
         <attribute name="isLeaf" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Feed" inverseName="folder" inverseEntity="Feed" syncable="YES"/>

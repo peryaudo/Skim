@@ -13,6 +13,9 @@ import FeedKit
 
 @objc(Feed)
 public class Feed: NSManagedObject {
+    @objc var titleWithCount: String {
+        return "\(title ?? "") (\(articles?.count ?? 0))"
+    }
 
     func retrieveFromUrl(closure: @escaping () -> Void) {
         guard let url = url else { return }
