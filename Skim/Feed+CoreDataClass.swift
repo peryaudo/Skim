@@ -13,6 +13,8 @@ import FeedKit
 
 @objc(Feed)
 public class Feed: NSManagedObject {
+    @objc let isLeaf: Bool = true
+
     @objc var titleWithCount: String {
         return "\(title ?? "") (\(articles?.count ?? 0))"
     }

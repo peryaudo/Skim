@@ -13,7 +13,6 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Feed" representedClassName="Feed" syncable="YES" codeGenerationType="category">
-        <attribute name="isLeaf" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" attributeType="URI" syncable="YES"/>
         <relationship name="articles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Article" inverseName="feed" inverseEntity="Article" syncable="YES"/>
@@ -25,7 +24,6 @@
         </uniquenessConstraints>
     </entity>
     <entity name="Folder" representedClassName="Folder" syncable="YES" codeGenerationType="category">
-        <attribute name="isLeaf" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="feeds" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Feed" inverseName="folder" inverseEntity="Feed" syncable="YES"/>
         <uniquenessConstraints>
@@ -36,7 +34,7 @@
     </entity>
     <elements>
         <element name="Article" positionX="-54" positionY="-9" width="128" height="120"/>
-        <element name="Feed" positionX="-63" positionY="-18" width="128" height="120"/>
-        <element name="Folder" positionX="-36" positionY="63" width="128" height="90"/>
+        <element name="Feed" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Folder" positionX="-36" positionY="63" width="128" height="75"/>
     </elements>
 </model>
