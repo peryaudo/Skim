@@ -18,6 +18,15 @@ public class Feed: NSManagedObject {
     @objc var titleWithCount: String {
         return "\(title ?? "") (\(unreadCount))"
     }
+    
+    func updateUnreadCount() {
+        let previousUnreadCount = unreadCount
+        unreadCount =
+            articles?.map({ (article) -> Int64 in
+                (article as! Article).shown ? 0 : 1
+            }).reduce(0, +) ?? 0
+        folder?.unreadCount += unreadCount - previousUnreadCount
+    }
 
     func retrieveFromUrl(closure: @escaping () -> Void) {
         guard let url = url else { return }
@@ -28,6 +37,7 @@ public class Feed: NSManagedObject {
             DispatchQueue.main.async {
                 self.managedObjectContext!.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
                 self.addToArticles(result: result)
+                self.updateUnreadCount()
                 do {
                     try context.save()
                 } catch {
