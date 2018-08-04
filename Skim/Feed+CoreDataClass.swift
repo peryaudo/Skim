@@ -31,6 +31,19 @@ public class Feed: NSManagedObject {
             }).reduce(0, +) ?? 0
         folder?.unreadCount += unreadCount - previousUnreadCount
     }
+    
+    func markArticlesAsShown() {
+        guard let articles = articles else { return }
+        for article in articles {
+            (article as! Article).shown = true
+        }
+        updateUnreadCount()
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            print("cannot save")
+        }
+    }
 
     func retrieveFromUrl(closure: @escaping () -> Void) {
         guard let url = url else { return }

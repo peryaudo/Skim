@@ -44,6 +44,8 @@ class FeedContentsController: NSViewController {
 extension FeedContentsController: SelectedFeedObserver {
     func onSelectedFeedChanged() {
         guard let feed = SelectedFeed.shared.feed else { return }
+        feed.markArticlesAsShown()
+
         arrayController.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         arrayController.fetchPredicate = NSPredicate(format: "feed == %@", feed)
         arrayController.fetch(nil)
