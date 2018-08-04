@@ -19,6 +19,10 @@ public class Feed: NSManagedObject {
         return "\(title ?? "") (\(unreadCount))"
     }
     
+    @objc class func keyPathsForValuesAffectingTitleWithCount() -> NSSet {
+        return ["title", "unreadCount"]
+    }
+    
     func updateUnreadCount() {
         let previousUnreadCount = unreadCount
         unreadCount =

@@ -17,4 +17,8 @@ public class Folder: NSManagedObject {
     @objc var titleWithCount: String {
         return "\(title ?? "") (\(unreadCount))"
     }
+    
+    @objc class func keyPathsForValuesAffectingTitleWithCount() -> NSSet {
+        return ["title", "unreadCount"]
+    }
 }
