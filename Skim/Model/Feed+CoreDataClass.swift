@@ -72,14 +72,7 @@ public class Feed: NSManagedObject {
             self.title = feed.title
             guard let items = feed.items else { return }
             for item in items {
-                let article = Article(context: managedObjectContext!)
-                article.date = item.pubDate ?? item.dublinCore?.dcDate
-                article.title = item.title
-                article.contents = item.description
-                if let link = item.link {
-                    article.url = URL(string: link)
-                }
-                addToArticles(article)
+                addToArticles(Article.parse(item: item, context: managedObjectContext!))
             }
         case .atom(_):
             return
