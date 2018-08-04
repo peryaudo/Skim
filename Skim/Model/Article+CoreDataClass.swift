@@ -17,10 +17,23 @@ public class Article: NSManagedObject {
         let article = Article(context: context)
         article.date = item.pubDate ?? item.dublinCore?.dcDate
         article.title = item.title?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        article.contents = item.description
+        article.contents = convertHtml(html: item.description)
         if let link = item.link {
             article.url = URL(string: link)
         }
         return article
+    }
+    
+    private class func convertHtml(html: String?) -> String? {
+        guard let html = html else {
+            return nil
+        }
+        guard let data = html.data(using: .utf16) else { return nil }
+        // TODO(tetsui): Fix NSURLConnection finished with error - code -1002
+        let attributedString =
+            NSAttributedString(html: data,
+                               options: [.documentType: NSAttributedString.DocumentType.html],
+                               documentAttributes: nil)
+        return attributedString?.string
     }
 }
