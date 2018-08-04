@@ -20,6 +20,45 @@ class FeedListController: NSViewController {
         treeController.fetch(nil)
     }
     
+    override func keyDown(with event: NSEvent) {
+        switch event.characters {
+        case "s":
+            selectNext(direction: +1)
+        case "a":
+            selectNext(direction: -1)
+        default:
+            ()
+        }
+    }
+    
+    func selectNext(direction: Int) {
+        guard let selectedNode = treeController.selectedNodes.first else {
+            return
+        }
+        guard let indexPath = getNextNode(node: selectedNode, direction: direction)?.indexPath else {
+            return
+        }
+        treeController.setSelectionIndexPath(indexPath)
+        feedSelectedAction(self)
+    }
+    
+    func getNextNode(node: NSTreeNode, direction: Int) -> NSTreeNode? {
+        if !node.isLeaf {
+            return direction > 0 ? node.children?.first : node.children?.last
+        }
+        
+        let indexPath = node.indexPath
+        if let sibling = node.parent?.descendant(at: [indexPath.item + direction]) {
+            return sibling
+        }
+        
+        if let parentSibling = node.parent?.parent?.descendant(at: [indexPath.section + direction]) {
+            return getNextNode(node: parentSibling, direction: direction)
+        }
+        
+        return nil
+    }
+    
     @IBAction func feedSelectedAction(_ sender: Any) {
         let selectedObjects = treeController.selectedObjects
         if selectedObjects.isEmpty {
