@@ -15,9 +15,6 @@ public class Folder: NSManagedObject {
     @objc let isLeaf: Bool = false
     
     @objc var titleWithCount: String {
-        let count = self.feeds?.map({ (feed) -> Int in
-            return (feed as! Feed).articles?.count ?? 0
-        }).reduce(0, +)
-        return "\(title ?? "") (\(count ?? 0))"
+        return "\(title ?? "") (\(unreadCount))"
     }
 }
