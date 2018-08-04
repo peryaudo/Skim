@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Add New Feed Controller-->
@@ -1023,13 +1024,13 @@ Gw
                         <rect key="frame" x="0.0" y="0.0" width="550" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-Ea-FDe">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="48" horizontalPageScroll="10" verticalLineScroll="48" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-Ea-FDe">
                                 <rect key="frame" x="0.0" y="0.0" width="550" height="480"/>
                                 <clipView key="contentView" id="lqC-dI-5yq">
                                     <rect key="frame" x="1" y="1" width="548" height="478"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" id="sgA-5s-44Z">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="46" rowSizeStyle="automatic" usesAutomaticRowHeights="YES" viewBased="YES" id="sgA-5s-44Z">
                                             <rect key="frame" x="0.0" y="0.0" width="548" height="478"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -1050,22 +1051,51 @@ Gw
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="E5a-U5-mes">
-                                                            <rect key="frame" x="1" y="1" width="545" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="545" height="46"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-P5-mXA">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="545" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Y0l-u1-bCS">
-                                                                        <font key="font" metaFont="system"/>
-                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                                    </textFieldCell>
-                                                                    <connections>
-                                                                        <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.title" id="3RH-Jr-7cl"/>
-                                                                    </connections>
-                                                                </textField>
+                                                                <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-iY-nyC">
+                                                                    <rect key="frame" x="2" y="2" width="541" height="42"/>
+                                                                    <subviews>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="wD2-P5-mXA">
+                                                                            <rect key="frame" x="-2" y="25" width="31" height="17"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Title" id="Y0l-u1-bCS">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.title" id="3RH-Jr-7cl"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Fs-rT-d30">
+                                                                            <rect key="frame" x="-2" y="0.0" width="74" height="17"/>
+                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Description" id="E2O-9J-EGW">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.contents" id="DSI-Bw-JrC"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <visibilityPriorities>
+                                                                        <integer value="1000"/>
+                                                                        <integer value="1000"/>
+                                                                    </visibilityPriorities>
+                                                                    <customSpacing>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                        <real value="3.4028234663852886e+38"/>
+                                                                    </customSpacing>
+                                                                </stackView>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="kG7-iY-nyC" secondAttribute="trailing" constant="2" id="dVa-um-06B"/>
+                                                                <constraint firstItem="kG7-iY-nyC" firstAttribute="top" secondItem="E5a-U5-mes" secondAttribute="top" constant="2" id="tf8-si-0Oi"/>
+                                                                <constraint firstItem="kG7-iY-nyC" firstAttribute="leading" secondItem="E5a-U5-mes" secondAttribute="leading" constant="2" id="vkj-pU-ri4"/>
+                                                                <constraint firstAttribute="bottom" secondItem="kG7-iY-nyC" secondAttribute="bottom" constant="2" id="z1F-Pg-S9M"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="wD2-P5-mXA" id="xpI-b7-Bek"/>
                                                             </connections>
@@ -1106,6 +1136,18 @@ Gw
                 <arrayController mode="entity" entityName="Article" editable="NO" id="vjk-OS-v8i"/>
             </objects>
             <point key="canvasLocation" x="792" y="931"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="imj-0f-WJU">
+            <objects>
+                <viewController id="6IU-Ka-UBY" sceneMemberID="viewController">
+                    <view key="view" id="Umk-v3-0Uf">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="5IS-HY-xRR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

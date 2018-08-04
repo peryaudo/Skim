@@ -75,6 +75,7 @@ public class Feed: NSManagedObject {
                 let article = Article(context: managedObjectContext!)
                 article.date = item.pubDate ?? item.dublinCore?.dcDate
                 article.title = item.title
+                article.contents = item.description
                 if let link = item.link {
                     article.url = URL(string: link)
                 }
