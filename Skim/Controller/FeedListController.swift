@@ -42,6 +42,7 @@ class FeedListController: NSViewController {
     
     func selectNext(direction: Int) {
         guard let selectedNode = treeController.selectedNodes.first else {
+            treeController.setSelectionIndexPath([0])
             return
         }
         guard let indexPath = getNextNode(node: selectedNode, direction: direction)?.indexPath else {
