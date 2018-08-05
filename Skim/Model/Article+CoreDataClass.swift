@@ -17,9 +17,16 @@ public class Article: NSManagedObject {
         let article = Article(context: context)
         article.date = item.pubDate ?? item.dublinCore?.dcDate
         article.title = item.title?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        article.contents = convertHtml(html: item.description)
+        //article.contents = convertHtml(html: item.description)
         if let link = item.link {
             article.url = URL(string: link)
+            let request: NSFetchRequest<Article> = Article.fetchRequest()
+            request.predicate = NSPredicate(format: "url == %@", link)
+            context.performAndWait {
+                if let existing = ((try? request.execute())?.first) {
+                    article.shown = existing.shown
+                }
+            }
         }
         return article
     }
