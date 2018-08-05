@@ -17,6 +17,7 @@
 		8702AA85211085D20003E9EF /* FeedKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8702AA82211084E50003E9EF /* FeedKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8727A4932114831100FC05DF /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A4912114831100FC05DF /* Folder+CoreDataClass.swift */; };
 		8727A4992115C58900FC05DF /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A4972115C58900FC05DF /* Article+CoreDataClass.swift */; };
+		8727A49E2116A8B300FC05DF /* FeedContentsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A49D2116A8B300FC05DF /* FeedContentsTableView.swift */; };
 		875C93CA2113284B008D0E04 /* SelectedFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C93C92113284B008D0E04 /* SelectedFeed.swift */; };
 		8764C96F211206F900E804DC /* Feed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764C96D211206F900E804DC /* Feed+CoreDataClass.swift */; };
 		87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F872111D0E30095A180 /* AddNewFeedController.swift */; };
@@ -73,6 +74,7 @@
 		8702AA82211084E50003E9EF /* FeedKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FeedKit.framework; path = Carthage/Build/Mac/FeedKit.framework; sourceTree = "<group>"; };
 		8727A4912114831100FC05DF /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8727A4972115C58900FC05DF /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8727A49D2116A8B300FC05DF /* FeedContentsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentsTableView.swift; sourceTree = "<group>"; };
 		875C93C92113284B008D0E04 /* SelectedFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFeed.swift; sourceTree = "<group>"; };
 		8764C96D211206F900E804DC /* Feed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed+CoreDataClass.swift"; sourceTree = "<group>"; };
 		87B94F872111D0E30095A180 /* AddNewFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				8702AA52211083610003E9EF /* AppDelegate.swift */,
 				8727A4952115C50300FC05DF /* Model */,
+				8727A49C2116A88800FC05DF /* View */,
 				8727A4962115C50E00FC05DF /* Controller */,
 				8702AA59211083610003E9EF /* Assets.xcassets */,
 				8702AA5B211083610003E9EF /* Main.storyboard */,
@@ -189,6 +192,14 @@
 				87B94F8B2111D9820095A180 /* FeedContentsController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8727A49C2116A88800FC05DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8727A49D2116A8B300FC05DF /* FeedContentsTableView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +342,7 @@
 				87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */,
 				8727A4992115C58900FC05DF /* Article+CoreDataClass.swift in Sources */,
 				8727A4932114831100FC05DF /* Folder+CoreDataClass.swift in Sources */,
+				8727A49E2116A8B300FC05DF /* FeedContentsTableView.swift in Sources */,
 				875C93CA2113284B008D0E04 /* SelectedFeed.swift in Sources */,
 				87B94F8A2111D96E0095A180 /* FeedListController.swift in Sources */,
 				87B94F8E2111EE5F0095A180 /* WindowController.swift in Sources */,

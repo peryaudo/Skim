@@ -10,6 +10,7 @@ import Cocoa
 
 class FeedContentsController: NSViewController {
     @IBOutlet var arrayController: NSArrayController!
+    @IBOutlet weak var articleTableView: FeedContentsTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,10 @@ class FeedContentsController: NSViewController {
         switch event.characters {
         case "j":
             arrayController.selectNext(self)
+            articleTableView.scrollSelectedToVisibleWithAnimation()
         case "k":
             arrayController.selectPrevious(self)
+            articleTableView.scrollSelectedToVisibleWithAnimation()
         case "v":
             articleDoubleClicked(self)
         default:
