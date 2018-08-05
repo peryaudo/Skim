@@ -1069,8 +1069,11 @@ Gw
                                                                             </connections>
                                                                         </textField>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Fs-rT-d30">
-                                                                            <rect key="frame" x="-2" y="0.0" width="74" height="17"/>
-                                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Description" id="E2O-9J-EGW">
+                                                                            <rect key="frame" x="-2" y="0.0" width="504" height="17"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="500" id="mEB-KG-QDh"/>
+                                                                            </constraints>
+                                                                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Description" id="E2O-9J-EGW">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
