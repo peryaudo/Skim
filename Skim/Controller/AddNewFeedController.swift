@@ -73,6 +73,7 @@ class AddNewFeedController: NSViewController {
             self.loadingSpinner.isHidden = true
             self.loadingSpinner.stopAnimation(self)
             self.titleTextField.stringValue = feed.title!
+            (NSApplication.shared.delegate! as! AppDelegate).updateUnreadCountBadge()
             self.dismissViewController(self)
         }
     }

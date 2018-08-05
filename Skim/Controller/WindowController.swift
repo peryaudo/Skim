@@ -43,5 +43,7 @@ class WindowController: NSWindowController {
                 self.loadingSpinner.isHidden = true
             }
         }
+        
+        appDelegate.updateUnreadCountBadge()
     }
 }

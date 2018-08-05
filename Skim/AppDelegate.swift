@@ -117,6 +117,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // If we got here, it is time to quit.
         return .terminateNow
     }
+    
+    func updateUnreadCountBadge() {
+        let unreadCount = Feed.getTotalUnreadCount(context: persistentContainer.viewContext)
+        
+        let dockTile = NSApplication.shared.dockTile
+        dockTile.badgeLabel = unreadCount > 0 ? "\(unreadCount)" : nil
+    }
 
 }
 

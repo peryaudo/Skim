@@ -63,6 +63,7 @@ extension FeedContentsController: SelectedFeedObserver {
     func onSelectedFeedChanged() {
         guard let feed = SelectedFeed.shared.feed else { return }
         feed.markArticlesAsShown()
+        (NSApplication.shared.delegate! as! AppDelegate).updateUnreadCountBadge()
 
         arrayController.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
         arrayController.fetchPredicate = NSPredicate(format: "feed == %@", feed)

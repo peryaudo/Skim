@@ -27,6 +27,18 @@ public class Feed: NSManagedObject {
         return ["title", "unreadCount"]
     }
     
+    class func getTotalUnreadCount(context: NSManagedObjectContext) -> Int64 {
+        let request: NSFetchRequest<Feed> = Feed.fetchRequest()
+        var feeds: [Feed] = []
+        context.performAndWait {
+            feeds = (try? request.execute()) ?? []
+        }
+        return
+            feeds.map { (feed) -> Int64 in
+                return feed.unreadCount
+            }.reduce(0, +)
+    }
+    
     func updateUnreadCount() {
         let previousUnreadCount = unreadCount
         unreadCount =
