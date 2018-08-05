@@ -831,6 +831,9 @@ Gw
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <binding destination="B9K-3i-oKy" name="value" keyPath="selection.url" id="bEr-jf-O0a"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJ8-lK-Ltj">
                                 <rect key="frame" x="20" y="331" width="47" height="17"/>
@@ -849,6 +852,10 @@ Gw
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </comboBoxCell>
+                                <connections>
+                                    <binding destination="N1a-cq-gQu" name="content" keyPath="arrangedObjects.title" id="qyB-tt-yAQ"/>
+                                    <binding destination="B9K-3i-oKy" name="value" keyPath="selection.folder.title" previousBinding="qyB-tt-yAQ" id="VGK-D9-HLK"/>
+                                </connections>
                             </comboBox>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oz-cU-qYL">
                                 <rect key="frame" x="20" y="59" width="410" height="233"/>
@@ -988,11 +995,13 @@ Gw
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="arrayController" destination="B9K-3i-oKy" id="oR3-OM-Z7J"/>
+                        <outlet property="feedsController" destination="B9K-3i-oKy" id="oR3-OM-Z7J"/>
+                        <outlet property="folderController" destination="N1a-cq-gQu" id="2kM-wo-uo5"/>
                     </connections>
                 </viewController>
                 <customObject id="gYf-1V-8pQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController mode="entity" entityName="Feed" editable="NO" id="B9K-3i-oKy"/>
+                <arrayController mode="entity" entityName="Feed" editable="NO" id="B9K-3i-oKy" userLabel="FeedsController"/>
+                <arrayController mode="entity" entityName="Folder" editable="NO" id="N1a-cq-gQu" userLabel="FolderController"/>
             </objects>
             <point key="canvasLocation" x="25" y="-405"/>
         </scene>
