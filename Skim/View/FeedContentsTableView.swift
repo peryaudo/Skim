@@ -17,15 +17,6 @@ class FeedContentsTableView: NSTableView {
     }
     
     func scrollSelectedToVisibleWithAnimation() {
-        let rowRect = rect(ofRow: selectedRow)
-        guard let viewRect = superview?.frame else {
-            return
-        }
-        var scrollOrigin = rowRect.origin
-        scrollOrigin.y = scrollOrigin.y + (rowRect.size.height - viewRect.size.height) / 2
-        if scrollOrigin.y < 0 {
-            scrollOrigin.y = 0
-        }
-        superview?.animator().setBoundsOrigin(scrollOrigin)
+        superview?.animator().setBoundsOrigin(rect(ofRow: selectedRow).origin)
     }
 }

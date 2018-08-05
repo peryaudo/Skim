@@ -25,10 +25,14 @@ class FeedContentsController: NSViewController {
         switch event.characters {
         case "j":
             arrayController.selectNext(self)
-            articleTableView.scrollSelectedToVisibleWithAnimation()
+            DispatchQueue.main.async {
+                self.articleTableView.scrollSelectedToVisibleWithAnimation()
+            }
         case "k":
             arrayController.selectPrevious(self)
-            articleTableView.scrollSelectedToVisibleWithAnimation()
+            DispatchQueue.main.async {
+                self.articleTableView.scrollSelectedToVisibleWithAnimation()
+            }
         case "v":
             articleDoubleClicked(self)
         default:
