@@ -971,6 +971,7 @@ Gw
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
+                                                                        <binding destination="Cbl-Zi-rbq" name="fontBold" keyPath="objectValue.unreadCount" id="4p3-HX-0eS"/>
                                                                         <binding destination="Cbl-Zi-rbq" name="value" keyPath="objectValue.titleWithCount" id="Tzv-Fb-Kjk"/>
                                                                     </connections>
                                                                 </textField>

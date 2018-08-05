@@ -15,7 +15,11 @@ public class Folder: NSManagedObject {
     @objc let isLeaf: Bool = false
     
     @objc var titleWithCount: String {
-        return "\(title ?? "") (\(unreadCount))"
+        if unreadCount > 0 {
+            return "\(title ?? "") (\(unreadCount))"
+        } else {
+            return title ?? ""
+        }
     }
     
     @objc class func keyPathsForValuesAffectingTitleWithCount() -> NSSet {

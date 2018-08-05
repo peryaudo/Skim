@@ -16,7 +16,11 @@ public class Feed: NSManagedObject {
     @objc let isLeaf: Bool = true
 
     @objc var titleWithCount: String {
-        return "\(title ?? "") (\(unreadCount))"
+        if unreadCount > 0 {
+            return "\(title ?? "") (\(unreadCount))"
+        } else {
+            return title ?? ""
+        }
     }
     
     @objc class func keyPathsForValuesAffectingTitleWithCount() -> NSSet {
