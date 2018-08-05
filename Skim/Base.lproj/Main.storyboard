@@ -971,8 +971,8 @@ Gw
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <connections>
-                                                                        <binding destination="Cbl-Zi-rbq" name="fontBold" keyPath="objectValue.unreadCount" id="4p3-HX-0eS"/>
                                                                         <binding destination="Cbl-Zi-rbq" name="value" keyPath="objectValue.titleWithCount" id="Tzv-Fb-Kjk"/>
+                                                                        <binding destination="Cbl-Zi-rbq" name="fontBold" keyPath="objectValue.unreadCount" id="4p3-HX-0eS"/>
                                                                     </connections>
                                                                 </textField>
                                                             </subviews>
@@ -1025,17 +1025,18 @@ Gw
                         <rect key="frame" x="0.0" y="0.0" width="550" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="115" horizontalPageScroll="10" verticalLineScroll="115" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-Ea-FDe">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="103" horizontalPageScroll="10" verticalLineScroll="103" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCr-Ea-FDe">
                                 <rect key="frame" x="0.0" y="0.0" width="550" height="480"/>
                                 <clipView key="contentView" id="lqC-dI-5yq">
                                     <rect key="frame" x="1" y="1" width="548" height="478"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="113" rowSizeStyle="automatic" usesAutomaticRowHeights="YES" viewBased="YES" id="sgA-5s-44Z" customClass="FeedContentsTableView" customModule="Skim" customModuleProvider="target">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="101" rowSizeStyle="automatic" usesAutomaticRowHeights="YES" viewBased="YES" id="sgA-5s-44Z" customClass="FeedContentsTableView" customModule="Skim" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="548" height="478"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <tableViewGridLines key="gridStyleMask" horizontal="YES"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="" width="545" minWidth="40" maxWidth="1000" id="l8y-nh-8bS">
@@ -1051,8 +1052,8 @@ Gw
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView misplaced="YES" id="E5a-U5-mes">
-                                                            <rect key="frame" x="1" y="1" width="545" height="113"/>
+                                                        <tableCellView id="E5a-U5-mes">
+                                                            <rect key="frame" x="1" y="1" width="545" height="101"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="14" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kG7-iY-nyC">
@@ -1081,11 +1082,8 @@ Gw
                                                                                 <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.date" id="do6-bp-H4c"/>
                                                                             </connections>
                                                                         </textField>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Fs-rT-d30">
-                                                                            <rect key="frame" x="18" y="0.0" width="504" height="17"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="500" id="mEB-KG-QDh"/>
-                                                                            </constraints>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Fs-rT-d30">
+                                                                            <rect key="frame" x="18" y="0.0" width="505" height="17"/>
                                                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Description" id="E2O-9J-EGW">
                                                                                 <font key="font" metaFont="system"/>
                                                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1097,7 +1095,8 @@ Gw
                                                                         </textField>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="5Fs-rT-d30" firstAttribute="leading" secondItem="kG7-iY-nyC" secondAttribute="leading" constant="20" id="Y9E-J9-bBs"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="5Fs-rT-d30" secondAttribute="trailing" constant="20" id="6Dd-8Y-R8U"/>
+                                                                        <constraint firstItem="5Fs-rT-d30" firstAttribute="leading" secondItem="kG7-iY-nyC" secondAttribute="leading" constant="20" id="mup-IU-Yri"/>
                                                                     </constraints>
                                                                     <visibilityPriorities>
                                                                         <integer value="1000"/>
