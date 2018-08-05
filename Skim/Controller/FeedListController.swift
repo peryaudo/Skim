@@ -26,9 +26,18 @@ class FeedListController: NSViewController {
             selectNext(direction: +1)
         case "a":
             selectNext(direction: -1)
+        case "j":
+            fallthrough
+        case "k":
+            let splitView = view.superview?.superview as? NSSplitView
+            view.window?.makeFirstResponder(splitView?.arrangedSubviews.last?.subviews.first)
         default:
             ()
         }
+    }
+    
+    override var acceptsFirstResponder: Bool {
+        return true
     }
     
     func selectNext(direction: Int) {

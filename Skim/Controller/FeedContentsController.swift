@@ -35,9 +35,18 @@ class FeedContentsController: NSViewController {
             }
         case "v":
             articleDoubleClicked(self)
+        case "a":
+            fallthrough
+        case "s":
+            let splitView = view.superview?.superview as? NSSplitView
+            view.window?.makeFirstResponder(splitView?.arrangedSubviews.first?.subviews.first)
         default:
             ()
         }
+    }
+    
+    override var acceptsFirstResponder: Bool {
+        return true
     }
 
     @IBAction func articleDoubleClicked(_ sender: Any) {
@@ -57,5 +66,8 @@ extension FeedContentsController: SelectedFeedObserver {
         arrayController.fetchPredicate = NSPredicate(format: "feed == %@", feed)
         arrayController.fetch(nil)
         arrayController.setSelectionIndex(0)
+        DispatchQueue.main.async {
+            self.articleTableView.scrollSelectedToVisibleWithAnimation()
+        }
     }
 }
