@@ -40,6 +40,8 @@ class FeedContentsController: NSViewController {
         case "s":
             let splitView = view.superview?.superview as? NSSplitView
             view.window?.makeFirstResponder(splitView?.arrangedSubviews.first?.subviews.first)
+        case " ":
+            articleTableView.scrollPageDown(self)
         default:
             ()
         }

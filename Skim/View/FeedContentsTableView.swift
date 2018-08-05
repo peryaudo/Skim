@@ -19,4 +19,12 @@ class FeedContentsTableView: NSTableView {
     func scrollSelectedToVisibleWithAnimation() {
         superview?.animator().setBoundsOrigin(rect(ofRow: selectedRow).origin)
     }
+    
+    override func scrollPageDown(_ sender: Any?) {
+        guard let bounds = superview?.bounds else { return }
+        var new_origin = bounds.origin
+        new_origin.y = new_origin.y + bounds.height
+
+        superview?.animator().setBoundsOrigin(new_origin)
+    }
 }
