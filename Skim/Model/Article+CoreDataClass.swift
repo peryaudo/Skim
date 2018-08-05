@@ -41,7 +41,8 @@ public class Article: NSManagedObject {
     }
     
     @objc var plainContents: String? {
-        return contents
-        // return parsedContents?.string
+        guard let contents = contents else { return nil }
+        guard let regex = try? NSRegularExpression(pattern: "<[^>]*>") else { return nil }
+        return regex.stringByReplacingMatches(in: contents, options: [], range: NSRange(0..<contents.utf16.count), withTemplate: "")
     }
 }
