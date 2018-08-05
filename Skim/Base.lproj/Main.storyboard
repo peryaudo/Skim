@@ -797,10 +797,10 @@ Gw
             </objects>
             <point key="canvasLocation" x="37" y="-17"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Feeds Controller-->
         <scene sceneID="L9I-Uj-wa5">
             <objects>
-                <viewController id="S0A-eb-ZN1" sceneMemberID="viewController">
+                <viewController id="S0A-eb-ZN1" customClass="EditFeedsController" customModule="Skim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="kFR-QB-fqC">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="450"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -854,7 +854,7 @@ Gw
                                 <rect key="frame" x="20" y="59" width="410" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="tuO-xR-zYR">
-                                    <rect key="frame" x="1" y="23" width="408" height="209"/>
+                                    <rect key="frame" x="1" y="0.0" width="408" height="232"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="8Hc-Xb-kel" viewBased="YES" id="eZL-Eh-qB0">
@@ -889,6 +889,9 @@ Gw
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="w8I-Vk-qIu" name="value" keyPath="objectValue.title" id="nef-AD-P9p"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -922,6 +925,9 @@ Gw
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="DUT-sc-Pnl" name="value" keyPath="objectValue.folder.title" id="CVg-mg-Jaz"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -931,11 +937,15 @@ Gw
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <binding destination="B9K-3i-oKy" name="content" keyPath="arrangedObjects" id="Bmq-61-R6P"/>
+                                                <binding destination="B9K-3i-oKy" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="Bmq-61-R6P" id="5AP-ut-2P1"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="yxa-sd-na9">
-                                    <rect key="frame" x="1" y="255" width="408" height="16"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="V20-Et-SGd">
@@ -957,6 +967,9 @@ Gw
 DQ
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="okClickAction:" target="S0A-eb-ZN1" id="Zpw-DV-pHc"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RwI-CT-zBb">
                                 <rect key="frame" x="295" y="13" width="82" height="32"/>
@@ -969,15 +982,19 @@ Gw
 </string>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="dismissController:" target="gYf-1V-8pQ" id="eCa-92-bsx"/>
+                                    <action selector="cancelClickAction:" target="S0A-eb-ZN1" id="iwR-TP-osL"/>
                                 </connections>
                             </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="arrayController" destination="B9K-3i-oKy" id="oR3-OM-Z7J"/>
+                    </connections>
                 </viewController>
                 <customObject id="gYf-1V-8pQ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController mode="entity" entityName="Feed" editable="NO" id="B9K-3i-oKy"/>
             </objects>
-            <point key="canvasLocation" x="60" y="-343"/>
+            <point key="canvasLocation" x="25" y="-405"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">

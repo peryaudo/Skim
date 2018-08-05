@@ -18,6 +18,7 @@
 		8727A4932114831100FC05DF /* Folder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A4912114831100FC05DF /* Folder+CoreDataClass.swift */; };
 		8727A4992115C58900FC05DF /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A4972115C58900FC05DF /* Article+CoreDataClass.swift */; };
 		8727A49E2116A8B300FC05DF /* FeedContentsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A49D2116A8B300FC05DF /* FeedContentsTableView.swift */; };
+		8727A4A2211729E400FC05DF /* EditFeedsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8727A4A1211729E400FC05DF /* EditFeedsController.swift */; };
 		875C93CA2113284B008D0E04 /* SelectedFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C93C92113284B008D0E04 /* SelectedFeed.swift */; };
 		8764C96F211206F900E804DC /* Feed+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8764C96D211206F900E804DC /* Feed+CoreDataClass.swift */; };
 		87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B94F872111D0E30095A180 /* AddNewFeedController.swift */; };
@@ -75,6 +76,7 @@
 		8727A4912114831100FC05DF /* Folder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Folder+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8727A4972115C58900FC05DF /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8727A49D2116A8B300FC05DF /* FeedContentsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContentsTableView.swift; sourceTree = "<group>"; };
+		8727A4A1211729E400FC05DF /* EditFeedsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFeedsController.swift; sourceTree = "<group>"; };
 		875C93C92113284B008D0E04 /* SelectedFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedFeed.swift; sourceTree = "<group>"; };
 		8764C96D211206F900E804DC /* Feed+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Feed+CoreDataClass.swift"; sourceTree = "<group>"; };
 		87B94F872111D0E30095A180 /* AddNewFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewFeedController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				87B94F8D2111EE5F0095A180 /* WindowController.swift */,
 				87B94F872111D0E30095A180 /* AddNewFeedController.swift */,
+				8727A4A1211729E400FC05DF /* EditFeedsController.swift */,
 				87B94F892111D96E0095A180 /* FeedListController.swift */,
 				87B94F8B2111D9820095A180 /* FeedContentsController.swift */,
 			);
@@ -339,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8764C96F211206F900E804DC /* Feed+CoreDataClass.swift in Sources */,
+				8727A4A2211729E400FC05DF /* EditFeedsController.swift in Sources */,
 				87B94F882111D0E30095A180 /* AddNewFeedController.swift in Sources */,
 				8727A4992115C58900FC05DF /* Article+CoreDataClass.swift in Sources */,
 				8727A4932114831100FC05DF /* Folder+CoreDataClass.swift in Sources */,
