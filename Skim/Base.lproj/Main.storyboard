@@ -1079,7 +1079,7 @@ Gw
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <connections>
-                                                                                <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.contents" id="DSI-Bw-JrC"/>
+                                                                                <binding destination="E5a-U5-mes" name="value" keyPath="objectValue.plainContents" id="uMD-ng-heM"/>
                                                                             </connections>
                                                                         </textField>
                                                                     </subviews>

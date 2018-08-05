@@ -17,7 +17,7 @@ public class Article: NSManagedObject {
         let article = Article(context: context)
         article.date = item.pubDate ?? item.dublinCore?.dcDate
         article.title = item.title?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        //article.contents = convertHtml(html: item.description)
+        article.contents = item.description
         if let link = item.link {
             article.url = URL(string: link)
             let request: NSFetchRequest<Article> = Article.fetchRequest()
@@ -31,16 +31,17 @@ public class Article: NSManagedObject {
         return article
     }
     
-    private class func convertHtml(html: String?) -> String? {
-        guard let html = html else {
-            return nil
-        }
-        guard let data = html.data(using: .utf16) else { return nil }
-        // TODO(tetsui): Fix NSURLConnection finished with error - code -1002
-        let attributedString =
+    @objc var parsedContents: NSAttributedString? {
+        guard let data = contents?.data(using: .utf16) else { return nil }
+        // TODO(tetsui): Prevent issueing HTTP requests to retrieve images
+        return
             NSAttributedString(html: data,
                                options: [.documentType: NSAttributedString.DocumentType.html],
                                documentAttributes: nil)
-        return attributedString?.string
+    }
+    
+    @objc var plainContents: String? {
+        return contents
+        // return parsedContents?.string
     }
 }
