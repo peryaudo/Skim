@@ -1144,18 +1144,6 @@ Gw
             </objects>
             <point key="canvasLocation" x="792" y="931"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="imj-0f-WJU">
-            <objects>
-                <viewController id="6IU-Ka-UBY" sceneMemberID="viewController">
-                    <view key="view" id="Umk-v3-0Uf">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
-                </viewController>
-                <customObject id="5IS-HY-xRR" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
