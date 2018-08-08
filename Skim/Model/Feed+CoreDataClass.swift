@@ -27,6 +27,36 @@ public class Feed: NSManagedObject {
         return ["title", "unreadCount"]
     }
     
+    @objc var folderTitle: String? {
+        get {
+            return folder?.title
+        }
+        
+        set(folderTitle) {
+            if folderTitle == folder?.title {
+                return
+            }
+            folder?.unreadCount -= self.unreadCount
+            if folder?.feeds?.count == 1 {
+                managedObjectContext?.delete(folder!)
+            }
+            managedObjectContext?.performAndWait {
+                let request: NSFetchRequest<Folder> = Folder.fetchRequest()
+                request.predicate = NSPredicate(format: "title == %@", folderTitle ?? "")
+                folder = ((try? request.execute()) ?? []).first
+            }
+            if folder == nil {
+                folder = Folder(context: managedObjectContext!)
+            }
+            folder?.title = folderTitle
+            folder?.unreadCount += self.unreadCount
+        }
+    }
+
+    @objc class func keyPathsForValuesAffectingFolderTitle() -> NSSet {
+        return ["folder.title"]
+    }
+    
     class func getTotalUnreadCount(context: NSManagedObjectContext) -> Int64 {
         let request: NSFetchRequest<Feed> = Feed.fetchRequest()
         var feeds: [Feed] = []

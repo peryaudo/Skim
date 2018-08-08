@@ -854,7 +854,7 @@ Gw
                                 </comboBoxCell>
                                 <connections>
                                     <binding destination="N1a-cq-gQu" name="content" keyPath="arrangedObjects.title" id="qyB-tt-yAQ"/>
-                                    <binding destination="B9K-3i-oKy" name="value" keyPath="selection.folder.title" previousBinding="qyB-tt-yAQ" id="VGK-D9-HLK"/>
+                                    <binding destination="B9K-3i-oKy" name="value" keyPath="selection.folderTitle" previousBinding="qyB-tt-yAQ" id="vWw-D5-vq7"/>
                                 </connections>
                             </comboBox>
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oz-cU-qYL">
