@@ -21,42 +21,41 @@ class FeedContentsController: NSViewController {
         arrayController.managedObjectContext = appDelegate.persistentContainer.viewContext
     }
     
-    override func keyDown(with event: NSEvent) {
-        switch event.characters {
-        case "j":
-            arrayController.selectNext(self)
-            DispatchQueue.main.async {
-                self.articleTableView.scrollSelectedToVisibleWithAnimation()
-            }
-        case "k":
-            arrayController.selectPrevious(self)
-            DispatchQueue.main.async {
-                self.articleTableView.scrollSelectedToVisibleWithAnimation()
-            }
-        case "v":
-            articleDoubleClicked(self)
-        case "a":
-            fallthrough
-        case "s":
-            let splitView = view.superview?.superview as? NSSplitView
-            view.window?.makeFirstResponder(splitView?.arrangedSubviews.first?.subviews.first)
-        case " ":
-            articleTableView.scrollPageDown(self)
-        default:
-            ()
-        }
-    }
-    
-    override var acceptsFirstResponder: Bool {
-        return true
-    }
-
     @IBAction func articleDoubleClicked(_ sender: Any) {
         guard let selectedObjects = arrayController.selectedObjects else { return }
         guard let url = (selectedObjects[0] as? Article)?.url else { return }
         NSWorkspace.shared.open(url)
     }
     
+    @IBAction func nextFeedSelected(_ sender: Any) {
+        let splitView = view.superview?.superview as? NSSplitView
+        view.window?.makeFirstResponder(splitView?.arrangedSubviews.first?.subviews.first)
+    }
+
+    @IBAction func previousFeedSelected(_ sender: Any) {
+        nextFeedSelected(sender)
+    }
+    
+    @IBAction func nextArticleSelected(_ sender: Any) {
+        arrayController.selectNext(self)
+        DispatchQueue.main.async {
+            self.articleTableView.scrollSelectedToVisibleWithAnimation()
+        }
+    }
+    
+    @IBAction func previousArticleSelected(_ sender: Any) {
+        arrayController.selectPrevious(self)
+        DispatchQueue.main.async {
+            self.articleTableView.scrollSelectedToVisibleWithAnimation()
+        }
+    }
+    
+    @IBAction func nextPageSelected(_ sender: Any) {
+        articleTableView.scrollPageDown(self)
+    }
+
+    @IBAction func previousPageSelected(_ sender: Any) {
+    }
 }
 
 extension FeedContentsController: SelectedFeedObserver {

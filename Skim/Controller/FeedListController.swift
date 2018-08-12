@@ -20,26 +20,23 @@ class FeedListController: NSViewController {
         treeController.fetch(nil)
     }
     
-    override func keyDown(with event: NSEvent) {
-        switch event.characters {
-        case "s":
-            selectNext(direction: +1)
-        case "a":
-            selectNext(direction: -1)
-        case "j":
-            fallthrough
-        case "k":
-            let splitView = view.superview?.superview as? NSSplitView
-            view.window?.makeFirstResponder(splitView?.arrangedSubviews.last?.subviews.first)
-        default:
-            ()
-        }
+    @IBAction func nextFeedSelected(_ sender: Any) {
+        selectNext(direction: +1)
     }
     
-    override var acceptsFirstResponder: Bool {
-        return true
+    @IBAction func previousFeedSelected(_ sender: Any) {
+        selectNext(direction: -1)
     }
     
+    @IBAction func nextArticleSelected(_ sender: Any) {
+        let splitView = view.superview?.superview as? NSSplitView
+        view.window?.makeFirstResponder(splitView?.arrangedSubviews.last?.subviews.first)
+    }
+    
+    @IBAction func previousArticleSelected(_ sender: Any) {
+        nextArticleSelected(sender)
+    }
+
     func selectNext(direction: Int) {
         guard let selectedNode = treeController.selectedNodes.first else {
             treeController.setSelectionIndexPath([0])
