@@ -125,6 +125,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let dockTile = NSApplication.shared.dockTile
         dockTile.badgeLabel = unreadCount > 0 ? "\(unreadCount)" : nil
     }
+    
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if !flag {
+            for window in sender.windows {
+                window.makeKeyAndOrderFront(self)
+            }
+        }
+        return true
+    }
 
 }
 
