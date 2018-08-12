@@ -56,6 +56,14 @@ class FeedContentsController: NSViewController {
 
     @IBAction func previousPageSelected(_ sender: Any) {
     }
+    
+    @IBAction func shareArticleAction(_ sender: Any) {
+        guard let article = arrayController.selectedObjects.first as? Article else { return }
+        guard let senderView = sender as? NSView else { return }
+        let items = [article.title ?? "", article.url?.absoluteString ?? ""]
+        let picker = NSSharingServicePicker(items: items)
+        picker.show(relativeTo: senderView.bounds, of: senderView, preferredEdge: NSRectEdge.minY)
+    }
 }
 
 extension FeedContentsController: SelectedFeedObserver {
